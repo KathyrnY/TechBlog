@@ -1,0 +1,15 @@
+<main class="main">
+    {{#each posts}}
+<div class="card">
+  <div class="card-body">
+    <div>
+        <h5 class="card-title">{{title}}</h5>
+         <p>Created by {{user.username}} on {{formatDate date_created}}</p>
+  </div>
+  <div>
+        <p class="card-text">{{content}}</p>
+  </div>
+  </div>
+</div>
+  {{/each}}
+    </main>

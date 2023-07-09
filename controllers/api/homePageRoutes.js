@@ -50,7 +50,8 @@ router.post('/login', async (req, res) => {
     req.session.user_id = user.dataValues.id;
     req.session.loggedIn = true;
 
-    res.status(200).json({ message: 'You are now logged in!' });
+    // res.status(200).json({ message: 'You are now logged in!' });
+    res.redirect('/dashboard'); 
   } catch (err) {
     console.error(err);
     res.status(500).send('Internal Server Error');

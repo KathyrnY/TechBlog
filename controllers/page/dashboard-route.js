@@ -1,43 +1,36 @@
 const router = require('express').Router();
-const { User, Post, Comment } = require('../../models')
+const { User, Post, } = require('../../models');
 const withAuth = require('../../utils/auth');
-const dateHelper = require('../../utils/helper');
 
 router.get('/', withAuth, async (req, res) => {
-    try {
-        const postData = await Post.findAll({
-            include: [
-                {
-                  model: User,
-                  attributes: ['username'],
-                },
-                {
-                  model: Comment,
-                  include: {
-                    model: User,
-                    attributes: ['username'],
-                  },
-                },
-              ],
-              attributes: { exclude: ['updatedAt'] },
-              order: [['date_created', 'DESC']],
-            });
-        const posts = postData.map((post) => {
-            const formattedPost = post.get({ plain: true });
-            formattedPost.date_created = dateHelper.formatDate(formattedPost.date_created);
+  try {
+    const userPostData = await Post.findAll({
+      where: { user_id: req.session.user_id },
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+      attributes: { exclude: ['updatedAt'] },
+      order: [['date_created', 'DESC']],
+    });
 
-            return formattedPost;
-        });
-      const homePage = true;
-
-      res.render('homepage', {
-        posts,
-        loggedIn: req.session.loggedIn,
-        homePage,
-      });
-    } catch (error) {
-        res.status(500).send('Internal Server Error', error);
+    if (!userPostData) {
+      res.status(404).json({ message: 'No blog post found with this id!' });
+      return;
     }
+
+    console.log('>>>>>>Post Data<<<<<<<<:', userPostData);
+    const posts = userPostData.map((post) => post.get({ plain: true }));
+
+    res.render('dashboard', {
+      posts,
+     loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

@@ -31,6 +31,9 @@ app.use(session(sess));
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+hbs.handlebars.registerHelper('formatDate', (date) => {
+  return new Date(date).toLocaleDateString();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
