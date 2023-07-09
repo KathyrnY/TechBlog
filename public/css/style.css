@@ -18,6 +18,11 @@ body {
     color: #3BBA9C;
   }
 
+  .nav-link:hover {
+    font-size:20px;
+    color: #3BBA9C !important;
+  }
+
   .form-label {
     text-align: center;
   }
@@ -49,3 +54,8 @@ body {
   .form-label {
     font-size: 25px;
   }
+
+  /* homepage css */
+.card {
+  flex-grow: 0;
+}
