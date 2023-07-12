@@ -44,7 +44,8 @@ router.get('/comments/:id', withAuth, async (req, res) => {
 
         res.render('comment-page', {
         comments,
-        loggedIn: req.session.loggedIn, 
+        loggedIn: req.session.loggedIn,
+        // userId: req.session.userId, 
       
         });
     } catch (error) {
