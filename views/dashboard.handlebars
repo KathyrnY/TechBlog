@@ -12,4 +12,35 @@
   </div>
 </div>
   {{/each}}
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="comment">
+    Add Post
+  </button>
+  <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" >
+      <div class="modal-content">
+        <div class="modal-header">
+         <h4 class="modal-title" id="exampleModalLabel">Add New Post</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+<div class="modal-body">
+        <div>
+          <label for="title" id="exampleModalLabel">Title:</label>
+          <input type="text" id="title" name="title" class="border border-none form-control form-control-lg text-start">
+        </div>
+        <div>
+          <label for="content" id="exampleModalLabel">Content:</label>
+          <textarea id="content" name="content" class="border border-none form-control form-control-lg text-start"></textarea>
+        </div>
+      </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id= "addPost" type="button" class="btn btn-primary">Add Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="/js/addpost.js"></script>
     </main>
