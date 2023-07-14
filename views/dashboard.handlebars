@@ -1,9 +1,11 @@
 <main class="main">
     {{#each posts}}
+        <a href="dashboard/{{id}}">
 <div class="card">
   <div class="card-body">
     <div>
         <h5 class="card-title">{{title}}</h5>
+        </a>
          <p>Created by {{user.username}} on {{formatDate date_created}}</p>
   </div>
   <div>

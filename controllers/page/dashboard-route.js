@@ -33,4 +33,23 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const postData = await Post.findByPk(postId);
+    const post = postData.get({plain: true});
+    if (!postData) {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+console.log('Post Data:', post)
+    res.render('edit-post', { 
+      post,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error, cannot retrieve post' });
+  }
+});
+
 module.exports = router;
