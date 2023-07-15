@@ -1,17 +1,15 @@
 <main class="main">
-  {{#each posts}}
   <div class="card">
     <div class="card-body">
       <div>
-        <h5 class="card-title">{{this.title}}</h5>
-        <p>Created by {{this.user.username}} on {{formatDate this.date_created}}</p>
+        <h5 class="card-title">{{post.title}}</h5>
+        <p>Created by {{post.user.username}} on {{formatDate post.date_created}}</p>
       </div>
       <div>
-        <p class="card-text">{{this.content}}</p>
+        <p class="card-text">{{post.content}}</p>
       </div>
     </div>
   </div>
-  {{/each}}
 
   {{#each comments}}
   <div class="card">
@@ -21,6 +19,7 @@
     </div>
   </div>
   {{/each}}
+  
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="comment">
     Add Comment
   </button>

@@ -1,6 +1,6 @@
 <main class="main">
     {{#each posts}}
-    <a href="homepage/comments/{{id}}">
+    <a href="homepage/comments/{{id}}" class="post-link">
 <div class="card">
   <div class="card-body">
     <div>
@@ -13,14 +13,5 @@
   </div>
   </div>
 </div>
-{{!-- {{#each comments}}
-      <div class="card">
-        <div class="card-body">
-        <p>Created by {{user.username}} on {{formatDate date_created}}</p>
-          <p class="card-text">{{content}}</p>
-        </div>
-      </div>
-    {{/each}} --}}
- 
   {{/each}}
     </main>
