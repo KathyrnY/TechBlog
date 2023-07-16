@@ -26,17 +26,23 @@ This blog post application provides a seamless platform for users to publish the
 
 
   ## Installation
-  1. You need to clone this repo to your local machine
-  2. Navigate to the project directory
-  3. run npm install to install your dependencies
-  4. Enter SQL username and password ceredentials
-  5. run npm run seed
-  6. run node server.js
+  
+  1) You need to clone this repo to your local machine
+  2) Navigate to the project directory
+  3) run npm install to install your dependencies
+  4) Make a .env file and enter your sql ceredentials there
+  5) Write mysql -u root -p in command line and then once logged in, enter source ./db/schema.sql
+  6) run npm run seed
+  7) run node server.js
 
   ## Usage
-
-
   
+  * When in the application, create a user by signing up
+  * Next, log into application
+  * The dashboard will show all your posts (new user will have none), click add new post.
+  * The homepage will show everyones post including yours, you can click a post and add a comment
+  * You can check out the delpoyed site above, under link
+
   ## Credits
   
   UNC Chapel Bootcamp
@@ -49,4 +55,3 @@ This blog post application provides a seamless platform for users to publish the
 
 For more information, please visit [MIT](https://opensource.org/licenses/MIT/).
  
-
