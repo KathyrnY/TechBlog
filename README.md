@@ -13,6 +13,8 @@ This blog post application provides a seamless platform for users to publish the
 
   * [Visual](visual)
 
+  * [Link](link)
+
   * [Installation](#installation)
 
   * [Usage](#usage)
@@ -24,6 +26,10 @@ This blog post application provides a seamless platform for users to publish the
   ## Visual
   
 [Untitled_ Jul 16, 2023 1_16 AM.webm](https://github.com/KathyrnY/TechBlog/assets/127566404/11032013-9564-4da9-b4c5-be05e0c64c4c)
+
+  ## Link
+
+  https://techblog78-fde880df1b9e.herokuapp.com/
 
   ## Installation
   
