@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const bcrypt = require('bcrypt');
+const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
   try {
@@ -58,7 +59,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
   console.log('inside logout route');
   if (req.session.loggedIn) {
     req.session.destroy(() => {

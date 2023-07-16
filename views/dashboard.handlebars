@@ -1,11 +1,12 @@
 <main class="main">
+    <div class="card-grid">
     {{#each posts}}
-        <a href="dashboard/{{id}}">
+        <a href="dashboard/{{id}}" class="post-link">
 <div class="card">
   <div class="card-body">
     <div>
         <h5 class="card-title">{{title}}</h5>
-        </a>
+        
          <p>Created by {{user.username}} on {{formatDate date_created}}</p>
   </div>
   <div>
@@ -13,11 +14,14 @@
   </div>
   </div>
 </div>
+</a>
   {{/each}}
-
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="comment">
-    Add Post
+  </div>
+<div class="text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="addPostBtn">
+    Add New Post
   </button>
+  </div>
   <!-- Modal -->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" >

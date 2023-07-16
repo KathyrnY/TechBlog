@@ -1,16 +1,22 @@
 body {
     background-color: #2E3047;
-    font-family: 'Playfair Display', Times New Roman, serif !important;
+    font-family: 'Playfair Display', Times New Roman, serif;
+  }
+
+  .btn.btn-primary {
+    background-color: #3BBA9C;
+    border-color: #2E3047;
+    color: #43455C;
   }
 
   .navbar {
-    background-color: #43455C !important;
-    color: #3BBA9C !important;
+    background-color: #43455C;
+    color: #3BBA9C;
   }
   
-  .card {
-    background-color: #43455C !important;
-    color: #3BBA9C !important;
+  .card-body{
+    background-color: #43455C;
+    color: #3BBA9C;
   }
 
 .navbar-brand {
@@ -20,11 +26,13 @@ body {
 
   .nav-link:hover {
     font-size:20px;
-    color: #3BBA9C !important;
+    color: #3BBA9C;
   }
 
-  .form-label {
+  .form-label-edit {
     text-align: center;
+    font-size: 30px;
+    color: #707793;
   }
 
   .btn-outline-light:hover {
@@ -56,25 +64,98 @@ body {
   }
 
   /* homepage css */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 .card {
-  flex-grow: 0;
+    background-color: #43455C;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+
+.post-link {
+  color:#3BBA9C;
+  text-decoration: none;
 }
 
 
 /* Comment Page CSS */
+
+#exampleModalLabel{
+  color: #3BBA9C ;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#backBtn {
+  margin-left: auto;
+}
+
+.post-card {
+  background-color: #43455C;
+  color: #3BBA9C;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px;
+}
 .custom-textbox {
   width: 100%;
   height: 100px; 
 }
 
-#exampleModalLabel{
-  color: #3BBA9C ;
-}
 .modal-content {
   background-color: #2E3047;
+}
+
+.form-label-name {
+  font-size: 30px;
+  color: #707793;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 textarea {
   height: 150px;
 }
 
+/* dashbaord css */
+#updateBtn {
+  margin-top: 10px;
+}
+ #addPostBtn {
+  margin-top: 20px;
+ }
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .card {
+    height: auto;
+  }
+}
