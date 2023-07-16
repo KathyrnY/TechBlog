@@ -7,7 +7,7 @@ const userData = [
     last_name: 'Moore',
     email: 'kathymoore@gmail.com',
     username: 'kathymoore',
-    password: 'kathy123',
+    password: '$2b$10$KGrcJIPjz6XGbl8xVlCA1.BQXYBZCkIujuz4wDCvfbRnPwNgkhaWa',
   },
   {
     first_name: 'Chris',
