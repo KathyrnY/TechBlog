@@ -23,14 +23,19 @@ This blog post application provides a seamless platform for users to publish the
 
   ## Visual
   
-  [Untitled_ Jul 15, 2023 11_53 PM.webm](https://github.com/KathyrnY/back-end-e-commerce/assets/127566404/31028c82-7069-448c-94ff-98553cbf6f89)
+
 
   ## Installation
-  
+  1. You need to clone this repo to your local machine
+  2. Navigate to the project directory
+  3. run npm install to install your dependencies
+  4. Enter SQL username and password ceredentials
+  5. run npm run seed
+  6. run node server.js
 
   ## Usage
 
-  Please see visual on how to it works
+
   
   ## Credits
   
