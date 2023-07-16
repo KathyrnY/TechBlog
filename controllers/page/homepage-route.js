@@ -17,12 +17,9 @@ router.get('/', async (req, res) => {
 
         const posts = postData.map((post) => post.get({ plain: true }));
 
-      const homePage = true;
-
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn,
-        homePage,
       });
     } catch (error) {
         res.status(500).send('Internal Server Error: ' + error);
